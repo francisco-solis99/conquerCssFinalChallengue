@@ -23,6 +23,21 @@ a {
   cursor: pointer;
 }
 
+h2 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: bold;
+  color: var(--tertiary-color);
+}
+
+figure {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
 /* HEADER */
 .header {
   min-width: 320px;
@@ -40,6 +55,7 @@ a {
 .row {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .nav__container {
@@ -158,13 +174,16 @@ a {
   opacity: 0.65;
 }
 
+/* Sections */
+.section {
+  min-width: 320px;
+  padding: 4em 0;
+}
 
 
 /* Hero section */
 .hero {
-  min-width: 320px;
   min-height: 350px;
-  padding: 2em 0;
   color: var(--text-color);
   background-color: var(--secundary-color);
   display: flex;
@@ -210,7 +229,6 @@ a {
 
 /* Features section */
 .features__section {
-  padding: 2em 0;
   color: var(--primary-color);
   background-color: var(--light-color);
 }
@@ -223,12 +241,53 @@ a {
 .feature h2 {
   margin-bottom: 0;
   font-size: 1.875rem;
-  font-family: 'Oswald', sans-serif;
-  font-weight: bold;
-  color: var(--tertiary-color);
 }
 
 .feature p {
+  font-size: 1.125rem;
+}
+
+/* More info section */
+.more__info__container {
+  flex-direction: column;
+}
+
+.more-info__description h2 {
+  font-size: 2.25rem;
+  margin-bottom: 0;
+}
+
+.more-info__description p {
+  font-size: 1.3125rem;
+  line-height: 1.8rem;
+}
+
+.more-info__description figure {
+  margin: 2em 0;
+}
+
+.more-info__bullets {
+  margin-top: 3.25em;
+}
+
+.bullet {
+  padding: 2em;
+  text-align: center;
+  color: var(--light-color);
+  background-color: var(--secundary-color);
+}
+
+.bullet + .bullet {
+  margin-top: 1em;
+}
+
+.bullet h2 {
+  margin: 0;
+  font-size: 1.875rem;
+  color: var(--light-color);
+}
+
+.bullet p {
   font-size: 1.125rem;
 }
 
@@ -285,6 +344,18 @@ a {
   .feature + .feature {
     margin-left: 5%;
   }
+
+  /* More info section */
+
+  .more-info__bullets {
+    margin-top: 3.25em;
+    display: flex;
+  }
+
+  .bullet + .bullet {
+    margin-top: 0;
+    margin-left: 0.75em;
+  }
 }
 
 
@@ -304,4 +375,29 @@ a {
     line-height: 2.25rem;
   }
 
+  /* More info section */
+  .more__info__container {
+    flex-direction: row;
+  }
+
+  .more-info__description {
+    width: 62%;
+  }
+
+  .more-info__description h2 {
+    font-size: 2.25rem;
+    margin: 0;
+  }
+
+  .more-info__bullets {
+    width: 32%;
+    align-self: flex-start;
+    flex-direction: column;
+    margin-top: 0;
+  }
+
+  .bullet + .bullet {
+    margin-top: 1em;
+    margin-left: 0;
+  }
 }
